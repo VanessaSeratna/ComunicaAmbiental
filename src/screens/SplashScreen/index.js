@@ -7,7 +7,7 @@ export const SplashScreen = () => {
   return (
     <View style={styles.container}>
       <Logo/>
-      <Text color="blue">Saneamento Ambiental</Text>
+      <Text color="#e8e4d6">ComunicaAmbiental</Text>
       <StatusBar style="auto" />
     </View>
   );
