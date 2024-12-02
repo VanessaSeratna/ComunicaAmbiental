@@ -1,24 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, View} from 'react-native';
-import { Text, Logo } from '../../components';
+import React, {useEffect} from 'react';
+import { Text, Logo, Container } from '../../components';
 
-export const SplashScreen = () => {
+export const SplashScreen = ({navigation}) => {
+  useEffect(() => {
+    setTimeout (() => {
+      navigation.navigate('Home')
+    }, 1000)
+  }, [navigation])
+
   return (
-    <View style={styles.container}>
+    <Container align="center" justify="center">
       <Logo/>
-      <Text color="#e8e4d6">ComunicaAmbiental</Text>
-      <StatusBar style="auto" />
-    </View>
+      <Text fontFamily="regular" color="offwhite" >ComunicaAmbiental</Text>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#0e62a5',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
- 
-});
