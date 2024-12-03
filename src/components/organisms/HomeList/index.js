@@ -2,25 +2,27 @@ import React from "react";
 import { FlatList } from 'react-native';
 import { Card } from '../../molecules';
 import { Text } from '../../atoms';
+import { ListContainer } from './styles';
+import { theme} from '~/styles/theme';
 
-const FAKE_DATA = [
-    {
-        id:0,
-        image_url: 'https://catalogo.ipea.gov.br/uploads/thumb_10_5.png',
-    },
-    {
-        id:1,
-        image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU0FFuh-W7O5wmXl-pNMluEOqzpkc2oe19Hg&s',
-    },
-]
-
-export const HomeList = () => {
+export const HomeList = ({ data, title }) => {
     return(
-        <FlatList
+        <ListContainer>
+            <Text ml={24} fontFamily="black" size={18}>
+                {title}
+            </Text>
+            <FlatList
             horizontal
-            data={FAKE_DATA}
+            data={data}
             renderItem={({ item }) => <Card item={item} />}
             keyExtractor={(item) => String(item.id)}
+            contentContainerStyle={{
+                paddingLeft: theme.metrics.px(24),
+                paddingTop: theme.metrics.px(12),
+                paddingBottom: theme.metrics.px(24),            
+            }}
         />
+        </ListContainer>
+        
     )
 }
