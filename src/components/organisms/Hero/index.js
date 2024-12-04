@@ -18,10 +18,7 @@ export const Hero = ({ item, onDetail }) => {
                     <Tag mt={onDetail ? 224: 210}>{type}</Tag>
                     <Text fontFamily= "bold" size={26} mt={5}> {title} </Text>
                     <ButtonsView>
-                        <IconButton label="Gostei" iconName="heart-circle-outline"/>
-                        { !onDetail && (<ContentButton/>)}
-                        { !onDetail && (
-                            <IconButton label="Saiba mais" iconName="information-circle-outline"/>)}
+                       { !onDetail && (<ContentButton/>)}
                     </ButtonsView>
                 </HeroGradient>
             </HeroImageBackground>    

@@ -16,7 +16,7 @@ export const Detail = () => {
                 Descrição
             </Text>
             {/* Verifica se infoItem foi encontrado antes de acessar suas propriedades */}
-            <Text ml={24} mr={24} size={14}>
+            <Text lh={20} mt={12} ml={24} mr={24} size={16}>
                 {infoItem ? infoItem.description : "Informação não encontrada"}
             </Text>
             <GoBack />

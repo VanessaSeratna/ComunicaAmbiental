@@ -12,7 +12,7 @@ export const ContentButton = () => {
                 color={theme.colors.black} 
         />
         <Text fontFamily="semiBold" size={10} color="black">
-            Abrir
+            Saiba tudo sobre Saneamento Ambiental
         </Text>
     </ContentButtonContainer>
 
